@@ -1,0 +1,19 @@
+# EXP-12
+
+A <- c(18,2,20)
+B <- c(22,28,10)
+C <- c(20,40,40)
+
+cat("Covariance between B and C\n")
+print(cov(B,C))
+
+data <- data.frame(A,B,C)
+
+cat("Covariance Matrix\n")
+print(cov(data))
+
+cat("Correlation between B and C\n")
+print(cor(B,C))
+
+cat("Correlation Matrix\n")
+print(cor(data))

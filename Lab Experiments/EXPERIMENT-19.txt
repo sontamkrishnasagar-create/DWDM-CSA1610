@@ -1,0 +1,13 @@
+# Load dataset
+data(mtcars)
+
+# Convert cyl into factor
+mtcars$cyl <- factor(mtcars$cyl)
+
+# Create Boxplot
+boxplot(mpg ~ cyl,
+        data = mtcars,
+        col = c("skyblue", "lightgreen", "pink"),
+        xlab = "Number of Cylinders",
+        ylab = "Miles per Gallon (mpg)",
+        main = "Boxplot of MPG by Cylinders")

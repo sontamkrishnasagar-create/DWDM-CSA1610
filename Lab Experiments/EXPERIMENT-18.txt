@@ -1,0 +1,14 @@
+# EXP-18
+
+plot(mtcars$mpg,
+type="l",
+ylim=range(c(mtcars$mpg,mtcars$qsec)),
+xlab="Car Index",
+ylab="Values",
+main="Multiple Line Plot")
+
+lines(mtcars$qsec,lty=2)
+
+legend("topright",
+legend=c("mpg","qsec"),
+lty=c(1,2))

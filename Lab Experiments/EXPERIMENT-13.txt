@@ -1,0 +1,37 @@
+# EXP-13
+
+x <- c(18,18,18,20,20,20,20,20,20,20,
+21,21,21,21,25,25,25,25,25,28,
+28,30,30,30)
+
+x <- sort(x)
+
+bins <- split(x,
+ceiling(seq_along(x)/(length(x)/3)))
+
+cat("Equal Frequency Bins\n")
+print(bins)
+
+cat("Bin Means\n")
+print(lapply(bins,function(a) rep(mean(a),length(a))))
+
+cat("Bin Boundaries\n")
+print(lapply(bins,function(a){
+
+low=min(a)
+high=max(a)
+
+sapply(a,function(v){
+
+if(abs(v-low)<=abs(v-high))
+low
+else
+high
+
+})
+
+}))
+
+hist(x,
+main="Histogram",
+xlab="Values")

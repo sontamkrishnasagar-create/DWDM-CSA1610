@@ -1,0 +1,32 @@
+lower <- c(1,5,15,20,50,80)
+upper <- c(5,15,20,50,80,110)
+freq <- c(200,450,300,1500,700,44)
+
+N <- sum(freq)
+cf <- cumsum(freq)
+
+cat("Total Frequency =", N,"\n")
+
+median_pos <- N/2
+
+index <- which(cf >= median_pos)[1]
+
+L <- lower[index]
+f <- freq[index]
+h <- upper[index]-lower[index]
+
+if(index == 1) {
+  cf_prev <- 0
+} else {
+  cf_prev <- cf[index - 1]
+}
+
+median <- L + ((median_pos-cf_prev)/f)*h
+
+cat("Approximate Median =", median)
+
+
+
+
+
+

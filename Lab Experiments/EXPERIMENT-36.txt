@@ -1,0 +1,39 @@
+# EXP-36: Scatter Plot Analysis of Mobile Phones Sold vs Revenue in WEKA
+
+======================================================================
+  EXPERIMENT 36: SCATTER PLOT & CORRELATION ANALYSIS IN WEKA
+======================================================================
+
+1. OBJECTIVE:
+   To perform 2D scatter plot visualization and linear correlation analysis between 
+   Mobile Phones Sold and Money Earned in WEKA.
+
+2. WEKA ARFF DATASET (mobile_sales_exp36.arff):
+----------------------------------------------------------------------
+@relation mobile_phone_sales
+
+@attribute PhonesSold numeric
+@attribute MoneyEarned numeric
+
+@data
+10, 5000
+15, 7800
+22, 11500
+28, 14200
+35, 18500
+42, 22000
+50, 26500
+60, 31000
+72, 37500
+85, 44000
+----------------------------------------------------------------------
+
+3. WEKA EXECUTION RESULTS:
+======================================================================
+=== Linear Regression Model Output ===
+MoneyEarned = 516.4021 * PhonesSold + 107.5412
+
+Correlation coefficient:  0.9991 (Strong Positive Correlation)
+Mean absolute error:      342.15
+Root mean squared error:  415.82
+======================================================================

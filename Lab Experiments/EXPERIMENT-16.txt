@@ -1,0 +1,19 @@
+# EXP-16
+
+v <- 80000
+
+minv <- 50000
+
+maxv <- 100000
+
+minmax <- (v-minv)/(maxv-minv)
+
+cat("Normalized Value =",minmax,"\n")
+
+x <- c(200,300,400,600,1000)
+
+cat("Min-Max\n")
+print((x-min(x))/(max(x)-min(x)))
+
+cat("Z-Score\n")
+print((x-mean(x))/sd(x))
